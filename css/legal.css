@@ -1,0 +1,99 @@
+/* ============================================
+   Sprout - Legal Pages (Privacy Policy, ToS)
+   Inherits base reset & fonts from style.css
+   ============================================ */
+
+.legal-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 24px;
+    background: #FFFFFF;
+    min-height: 100vh;
+    line-height: 1.8;
+}
+
+.legal-container h1 {
+    color: #1B5E20;
+    margin-bottom: 10px;
+    font-size: 2em;
+    font-weight: 800;
+}
+
+.legal-container h2 {
+    color: #1B5E20;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+    font-weight: 700;
+}
+
+.legal-container h3 {
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    font-weight: 700;
+}
+
+.legal-container p {
+    margin-bottom: 15px;
+}
+
+.legal-container ul {
+    margin-bottom: 15px;
+    padding-left: 25px;
+}
+
+.legal-container li {
+    margin-bottom: 8px;
+}
+
+.legal-container a {
+    color: #3BA55D;
+}
+
+.legal-container a:hover {
+    text-decoration: underline;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 30px;
+    color: #3BA55D;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.updated {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.disclaimer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    font-style: italic;
+    color: #666;
+}
+
+.thanks {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    font-style: italic;
+    text-align: center;
+    color: #666;
+}
+
+code {
+    background: #EBF7EB;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
