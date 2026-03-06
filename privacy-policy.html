@@ -19,7 +19,7 @@
         <a href="index.html" class="back-link">&larr; Back to Sprout</a>
 
         <h1>Privacy Policy for Sprout - Child Growth Tracker</h1>
-        <p class="updated"><strong>Last Updated:</strong> March 1, 2026</p>
+        <p class="updated"><strong>Last Updated:</strong> March 5, 2026</p>
 
         <h2>Overview</h2>
         <p>Sprout - Child Growth Tracker ("the App"), is committed to protecting your privacy. This Privacy Policy explains how we handle your information when you use our iOS application. The App is designed as a privacy-first tool &mdash; all data stays on your device.</p>
@@ -32,15 +32,17 @@
             <li><strong>Child profiles:</strong> Names, birth dates, and biological sex</li>
             <li><strong>Height measurements:</strong> Height values, dates, and optional notes</li>
             <li><strong>Weight measurements:</strong> Weight values, dates, and optional notes</li>
+            <li><strong>Head circumference measurements:</strong> Head circumference values, dates, and optional notes</li>
             <li><strong>Photos:</strong> Profile photos and measurement milestone photos you choose to attach</li>
             <li><strong>Parent heights:</strong> Mother's and father's heights (for adult height prediction features)</li>
-            <li><strong>Preferences:</strong> Height unit preference (metric/imperial), weight unit preference (kg/lbs), appearance setting (light/dark/system), language preference, and reminder preferences</li>
+            <li><strong>Preferences:</strong> Height unit preference (metric/imperial), weight unit preference (kg/lbs), head circumference unit preference (cm/inches), appearance setting (light/dark/system), language preference, and reminder preferences</li>
         </ul>
+        <p><strong>Computed data:</strong> The App calculates BMI (Body Mass Index) by pairing height and weight measurements recorded within a 14-day window. BMI values, percentiles, and categories are computed locally and are not stored separately &mdash; they are derived from your existing measurements on demand.</p>
 
         <h3>Where Data is Stored</h3>
         <p><strong>By default, all data is stored locally on your device.</strong> The App does not transmit any personal information to third-party servers.</p>
         <ul>
-            <li><strong>App data</strong> (child profiles, height and weight measurements) is stored using Apple's SwiftData framework in the app's secure container</li>
+            <li><strong>App data</strong> (child profiles, height, weight, and head circumference measurements) is stored using Apple's SwiftData framework in the app's secure container</li>
             <li><strong>Photos</strong> are compressed and stored locally within the app's data</li>
             <li><strong>Preferences</strong> (unit system, appearance, reminder settings) are stored in the app's UserDefaults</li>
             <li><strong>Sensitive configuration</strong> is stored in the iOS Keychain with device-only access</li>
@@ -51,16 +53,16 @@
         <p>If you use the Sprout Home Screen widget, a lightweight summary of your children's data is shared between the App and the widget extension using Apple's App Group storage on your device. This includes:</p>
         <ul>
             <li>Child name, birth date, sex, and a small profile thumbnail</li>
-            <li>Latest height and weight measurements with dates</li>
-            <li>Growth percentile values</li>
+            <li>Latest height, weight, and head circumference measurements with dates</li>
+            <li>Growth percentile values and latest BMI</li>
         </ul>
         <p>This data never leaves your device. It is stored in a shared on-device container accessible only to the App and its widget extension.</p>
 
         <h2>iCloud Sync (Optional, Pro Feature)</h2>
         <p>Sprout Pro subscribers can optionally enable <strong>iCloud Sync</strong> to synchronize their data across multiple Apple devices signed into the same iCloud account. When enabled:</p>
         <ul>
-            <li>Child profiles, height and weight measurements, and associated data are synced via <strong>Apple's CloudKit</strong> framework</li>
-            <li>User preferences (height unit, weight unit, appearance) are synced via Apple's <strong>iCloud Key-Value Store (NSUbiquitousKeyValueStore)</strong></li>
+            <li>Child profiles, height, weight, and head circumference measurements, photos, and associated data are synced via <strong>Apple's CloudKit</strong> framework</li>
+            <li>User preferences (height unit, weight unit, head circumference unit, appearance) are synced via Apple's <strong>iCloud Key-Value Store (NSUbiquitousKeyValueStore)</strong></li>
             <li>Data is transmitted and stored using Apple's iCloud infrastructure &mdash; the developer does not operate any servers and has no access to your iCloud data</li>
             <li>iCloud data is encrypted in transit and at rest by Apple</li>
             <li>Sync can be disabled at any time in the App's Settings. Disabling sync stops new data from being uploaded but does not delete data already in iCloud</li>
@@ -109,7 +111,7 @@
         <h2>Backup and Restore</h2>
         <p>The App provides a local backup and restore feature:</p>
         <ul>
-            <li>Backups are saved as <code>.sproutbackup</code> files containing your children's data, measurements, photos, and preferences</li>
+            <li>Backups are saved as <code>.sproutbackup</code> files containing your children's data, all measurements (height, weight, head circumference), photos, and preferences</li>
             <li>Backup files are created locally and shared using the iOS share sheet &mdash; you choose where to save them</li>
             <li>Backup files use iOS complete file protection encryption</li>
             <li>No backup data is sent to the developer or any third-party service</li>
@@ -119,10 +121,18 @@
         <h2>Export Features</h2>
         <p>The App allows you to export your data:</p>
         <ul>
-            <li><strong>PDF reports:</strong> Growth reports containing child information, measurements, and growth charts</li>
-            <li><strong>CSV files:</strong> Measurement data in spreadsheet format</li>
+            <li><strong>PDF reports:</strong> Comprehensive growth reports containing child information, height/weight/head circumference measurements, BMI data, and growth charts</li>
+            <li><strong>CSV files:</strong> All measurement data (height, weight, head circumference, and BMI) in spreadsheet format</li>
         </ul>
         <p>Exported files are generated locally and shared using the iOS share sheet. They are not sent to any server. Temporary export files are deleted after sharing.</p>
+
+        <h2>Share Cards</h2>
+        <p>The App can generate branded share cards showing your child's growth milestones (name, age, height, weight, percentile). These images are:</p>
+        <ul>
+            <li>Rendered locally on your device</li>
+            <li>Shared only when you explicitly choose to via the iOS share sheet</li>
+            <li>Not sent to any server or stored externally by the App</li>
+        </ul>
 
         <h2>Notifications</h2>
         <p>If you enable reminders, the App uses <strong>local notifications only</strong> to remind you to take measurements. This feature:</p>
@@ -168,12 +178,12 @@
         </ul>
 
         <h3>In-App Purchases</h3>
-        <p>The App offers an optional Sprout Pro subscription via Apple's App Store. Purchase validation is handled entirely by Apple's StoreKit framework. When you make a purchase:</p>
+        <p>The App offers an optional one-time Sprout Pro upgrade via Apple's App Store. Purchase validation is handled entirely by Apple's StoreKit framework. When you make a purchase:</p>
         <ul>
             <li>Transaction data (product ID, purchase receipt) is processed by Apple &mdash; not by the developer</li>
             <li>The App communicates only with Apple's servers for purchase verification</li>
             <li>No personal data is sent to the developer as part of the purchase process</li>
-            <li>Your Pro subscription status is cached locally on your device</li>
+            <li>Your Pro status is cached locally on your device</li>
         </ul>
         <p>For details on how Apple handles your purchase data, see <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
 
@@ -187,7 +197,7 @@
         <h2>Apple Privacy Nutrition Label</h2>
         <p>In accordance with Apple's App Store requirements, the App declares:</p>
         <ul>
-            <li><strong>Data Linked to You (if iCloud Sync enabled):</strong> Health &amp; Fitness data (child height and weight measurements) is linked to your iCloud account for sync purposes</li>
+            <li><strong>Data Linked to You (if iCloud Sync enabled):</strong> Health &amp; Fitness data (child height, weight, and head circumference measurements) is linked to your iCloud account for sync purposes</li>
             <li><strong>Data Not Linked to You:</strong> Photos/Videos (used for app functionality only)</li>
             <li><strong>Data Not Collected:</strong> All other categories</li>
             <li><strong>Tracking:</strong> The App does not track you across other companies' apps or websites</li>
