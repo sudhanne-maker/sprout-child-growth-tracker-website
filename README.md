@@ -1,6 +1,6 @@
-# Sprout - Child Growth Tracker Website
+# Beanstalk - Child Growth Tracker Website
 
-Marketing landing page for [Sprout - Child Growth Tracker](https://apps.apple.com/us/app/sprout-height-tracker/id6758862095), an iOS app for tracking your child's height and weight with WHO & CDC percentile growth charts.
+Marketing landing page for [Beanstalk - Child Growth Tracker](https://apps.apple.com/us/app/sprout-height-tracker/id6758862095), an iOS app for tracking your child's height and weight with WHO & CDC percentile growth charts.
 
 ## Live Site
 
