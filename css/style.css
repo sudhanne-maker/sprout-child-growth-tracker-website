@@ -122,14 +122,16 @@ a:hover {
 }
 
 .screenshot-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 24px;
     max-width: 900px;
     margin: 0 auto;
 }
 
 .screenshot-item {
+    width: calc((100% - 48px) / 3);
     text-align: center;
 }
 
@@ -343,8 +345,11 @@ footer {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .screenshot-item {
+        width: calc((100% - 32px) / 3);
+    }
+
     .screenshot-grid {
-        grid-template-columns: repeat(3, 1fr);
         gap: 16px;
     }
 }
@@ -369,8 +374,11 @@ footer {
         font-size: 1.6rem;
     }
 
+    .screenshot-item {
+        width: calc((100% - 12px) / 2);
+    }
+
     .screenshot-grid {
-        grid-template-columns: repeat(2, 1fr);
         gap: 12px;
     }
 
@@ -418,9 +426,11 @@ footer {
         padding: 0 16px;
     }
 
+    .screenshot-item {
+        width: 100%;
+    }
+
     .screenshot-grid {
-        grid-template-columns: 1fr;
         max-width: 260px;
-        margin: 0 auto;
     }
 }
